@@ -34,6 +34,7 @@ import javax.persistence.Transient;
 import org.springframework.beans.support.MutableSortDefinition;
 import org.springframework.beans.support.PropertyComparator;
 import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.lang.Nullable;
 import org.springframework.samples.petclinic.model.NamedEntity;
 import org.springframework.samples.petclinic.visit.Visit;
 
@@ -50,6 +51,7 @@ public class Pet extends NamedEntity {
 
     @Column(name = "birth_date")
     @DateTimeFormat(pattern = "yyyy-MM-dd")
+    @Nullable
     private LocalDate birthDate;
 
     @ManyToOne
